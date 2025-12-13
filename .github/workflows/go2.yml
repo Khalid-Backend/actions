@@ -1,8 +1,13 @@
 name: Go
 
 on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'new_workflow'
   push:
-    branches: ['new_workflow']
+    branches: ['main']
 
 jobs:
   build:
